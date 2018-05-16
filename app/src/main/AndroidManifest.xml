@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Home"></activity>
+        <activity android:name=".Wallet"></activity>
     </application>
 
 </manifest>
