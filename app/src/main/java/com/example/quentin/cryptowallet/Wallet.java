@@ -24,11 +24,23 @@ public class Wallet extends Activity {
         Intent in = this.getIntent();
         Bundle bundle = in.getExtras();
 
-        Monnaie m =(Monnaie) bundle.getSerializable("coin");
+        final Monnaie m =(Monnaie) bundle.getSerializable("coin");
 
         logoDessus = findViewById(R.id.imageView5);
-        logodessous = findViewById(R.id.imageView7);
         logoDessus.setImageResource(m.getlogocoin());
+        logoDessus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Wallet.this,CryptoMoney.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("coin", m);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        logodessous = findViewById(R.id.imageView7);
         logodessous.setImageResource(m.getlogocoin());
 
 

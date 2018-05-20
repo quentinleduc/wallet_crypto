@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".Home" />
         <activity android:name=".Wallet" />
-        <activity android:name=".CryptoMoney"></activity>
+        <activity android:name=".CryptoMoney" />
+        <activity android:name=".Success"></activity>
     </application>
 
 </manifest>
